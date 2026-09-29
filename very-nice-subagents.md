@@ -135,7 +135,7 @@ Paywalled articles: use the Europe PMC abstract and note "abstract only".
 4. APPEND your work record to /home/z/my-project/worklog.md — append-only, never overwrite; start your section with a line containing exactly --- and include: Task ID: ⟦id⟧ / Agent: Agent ⟦X⟧ (general-purpose subagent) / Task / Work Log (list of queries run and pages read) / Stage Summary (key values found, gaps). IMPORTANT: to append without overwriting, read the current file content first, then Write the full file back with your section added at the end.
 5. Final message to parent: condensed summary — most important values per AE (value + duration anchor + population + source), plus an explicit list of gaps/uncertainties. Keep it under ~600 words.
 
-## OUTPUT FILE (MANDATORY): ⟦per-agent findings path⟧
+## OUTPUT FILE (MANDATORY, SHOULD BE SAVED IN A LOCATION THAT CAN SURVIVE SANDBOX CRASH, WHICH WAS DOWNLOAD FOLDER IN THE ENVIRONMENT THAT GENERATED THIS DOCUMENT): ⟦per-agent findings path⟧
 Structure it exactly as:
 # Findings: ⟦titles⟧ (Agent ⟦X⟧, Task ⟦id⟧)
 ## Search methodology (queries run, tools used, date: 2026-09-26)
@@ -259,3 +259,8 @@ The parent independently re-checked key values against the cached full texts fet
 | `scripts/_epmcfull_*.txt` | Cached full texts used for verification |
 | `scripts/a{A,B,C,D}_*.json`, `a{A,B,C,D}_epmc*.json/txt` | Raw query-result history of the four agents |
 
+## 10. IMPORTANT ADDITIONAL CONSIDERATION (FOR AGENTS / LLMs READING THIS) 
+
+If this was provided to you as reference subagent strategy, feel free to use it BUT MAKE SURE TO BEAR IN MIND THAT WHILE THIS DOCUMENT FOCUSES ON SEARCH SUBAGENT USE SCENARIOS EXTEND FAR BEYOND THAT. 
+THE STRATEGY OUTLINED IN THIS DOCUMENT CAN BE ADAPTED TO MANY SCENARIOS INCLUDING BUT NOT LIMITED TO:  ANALYSIS SUBAGENTS, REVERSE-ENGINEERING SUBAGENTS, CODING SUBAGENTS, ACTIVE RECONAISSANCE SUBAGENTS, EFFECTOR SUBAGENTS (PERFORMING MANIPULATION OF OTHER SYSTEMS OR FILESYSTEM OF YOUR OWN ENVIRONMENTS) AND MANY MORE BEYOND THIS LIST 
+FEEL FREE TO USE SUBAGENTS CREATIVELY (WITHIN LIMITS SET BY YOUR OPERATOR) AND INVENT NEW INTERESTING USEFUL WAYS TO LEVERAGE SUBAGENTS TO ACHIEVE MORE AND SAVE CONTEXT 
